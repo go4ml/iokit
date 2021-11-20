@@ -1,0 +1,7 @@
+.*
+*~
+*.out
+*.txt
+gocov.txt
+tests.test
+tests.exe
