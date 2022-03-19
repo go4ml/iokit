@@ -1,9 +1,9 @@
 package iokit
 
 import (
+	"go4ml.xyz/fu"
 	"io"
 	"strings"
-	"sudachen.xyz/pkg/fu"
 )
 
 type IoUrl struct {

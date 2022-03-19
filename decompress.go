@@ -8,7 +8,7 @@ import (
 	"github.com/ulikunitz/xz"
 	"io"
 	"os"
-	"sudachen.xyz/pkg/fu"
+	"go4ml.xyz/fu"
 )
 
 type compressed struct{ input interface{} }

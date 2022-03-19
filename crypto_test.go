@@ -2,7 +2,7 @@ package iokit
 
 import (
 	"crypto/rand"
-	"sudachen.xyz/pkg/fu"
+	"go4ml.xyz/fu"
 	"gotest.tools/assert"
 	"testing"
 )

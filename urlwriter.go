@@ -1,10 +1,10 @@
 package iokit
 
 import (
+	"go4ml.xyz/errstr"
 	"io"
 	"os"
 	"strings"
-	"sudachen.xyz/pkg/errstr"
 )
 
 type urlwriter struct {

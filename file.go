@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
-	"sudachen.xyz/pkg/errstr"
+	"go4ml.xyz/errstr"
 )
 
 func File(path string) StrictInputOutput {

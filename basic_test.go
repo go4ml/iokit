@@ -2,6 +2,7 @@ package iokit
 
 import (
 	"fmt"
+	"go4ml.xyz/fu"
 	"gotest.tools/assert"
 	"io/ioutil"
 	"math/rand"
@@ -75,9 +76,9 @@ func Test_CacheOpen(t *testing.T) {
 
 func findSkills(s string) []string {
 	j := strings.Index(s, "SKILLS")
-	j = strings.Index(s[j:], "<li>") + j
-	k := strings.Index(s[j:], "</li>") + j
-	return strings.Split(s[j+4:k], ", ")
+	j = strings.Index(s[j:], "<!--") + j
+	k := strings.Index(s[j:], "-->") + j
+	return strings.Split(s[j+4:k], ",")
 }
 
 func Test_PathHttp(t *testing.T) {
@@ -90,14 +91,14 @@ func Test_PathHttp(t *testing.T) {
 	x, err := ioutil.ReadAll(r)
 	assert.NilError(t, err)
 	u := findSkills(string(x))
-	assert.Assert(t, u[0] == "Go")
+	assert.Assert(t, fu.Contains(u,"Go"))
 	r, err = Url("file://" + cache.Path()).Open()
 	assert.NilError(t, err)
 	defer r.Close()
 	x, err = ioutil.ReadAll(r)
 	assert.NilError(t, err)
 	u = findSkills(string(x))
-	assert.Assert(t, u[0] == "Go")
+	assert.Assert(t, fu.Contains(u,"Go"))
 }
 
 func Test_StringIO(t *testing.T) {

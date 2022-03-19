@@ -6,7 +6,7 @@ import (
 	"os/user"
 	"path"
 	"path/filepath"
-	"sudachen.xyz/pkg/fu"
+	"go4ml.xyz/fu"
 )
 
 const cacheGoData = ".cache/XYZ/go-data/"
